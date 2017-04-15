@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" />
+  <link rel="stylesheet" href="css/jQuery.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<main>
+  <article class="article_1">
+
+<ul id="menu">
+      <li><input type="button" onclick="this.style.display='none'" value="Нажми, чтобы меня спрятать" /></li>
+      <li><input type="button" id="elem" value="Нажми, чтобы меня спрятать(через функцию)" /></li>
+            
+      <li><input type="button" onclick="$('.test').hide()" value="Метод JQuery" /></li>
+      <li><input type="button" onclick="$('.test').show()" value="Метод JQuery show" /></li>       
+
+      <li class="test">Test 1</li>
+      <li class="test">Test 2</li>
+      <li class="test">Test 2</li>
+          <li><input type="button" onclick="color()" value="поменять цвет JQuery " /></li>
+      <p class="test">Test 3</p> 
+
+         <li><input type="button" onclick="settimeout()" value="поменять цвет через 2 секунды JQuery " /></li> 
+         <li><input type="button" onclick="colorfirst()" value="Поменять цвет 1-го test " /></li>
+         <li><input type="button" onclick="colorsecond()" value="Поменять цвет 2-го test " /></li>
+
+         <img src="img/1.png" style="display: none" id="img"  alt="цветок">
+  </ul>
+
+  <form name  action="#">
+    <label for="female">Женский</label>
+    <input class="form_inpt" type="radio" id="female" name="sex" value="женский">
+    <label for="male">Мужской</label>
+    <input class="form_inpt" type="radio" id="male" name="sex" value="мужской">
+    <br/>
+    <br/>
+    <span id="message"></span>
+    <input class="form_inpt" type="button" id="done" onclick="return valid()" value="Проверить что выбрали" />
+
+  </form>
+
+
+  <ul id="menu2">
+  <input type="button" id="done" onclick="return quantity()" value="Посмотреть все li и input в консоле" />
+
+  <div title="Нажмите на квадрат чтоб увеличить его на 5px и получить координаты мышки при нажатии" style="height: 50px; width: 50px; background-color: #FF4E50;" id="rectungle" ></div>
+  
+  
+  <ul/>
+  </div>
+</article>
+
+<article class="article_2">
+  <ul id="menu">
+      <img src="1.jpg" alt="Изображение" title="Изображение"><br/>
+      <img src="2.jpg" ><br/>
+      <img src="3.jpg" ><br/>
+      <img src="4.jpg" alt="Изображение" title="Изображение">
+      <br/>
+      <li><input type="button" onclick="addattr()" value="Добавить атрибуты картинкам"/></li>
+      <li><input type="button" onclick="finfattr()" value="Найти все атрибуты картинок"/></li>
+
+      <div id="div">Text</div>
+      <li><input type="button" onclick="selectcolor()" value="Нажми чтоб закрасить Text"/></li>
+
+
+    <div id="font_size">Text</div>
+      <li><input type="button" onclick="changestyle()" value="Задать стили Text"/>
+      <li><input type="button" onclick="changeheight()" value="Поменять высоту Text"/>
+      </li>
+      <li>
+        <div id="blok">
+          <span>Блок</span>
+          <p>Абзац</p>
+        </div>
+        <li><input type="button" onclick="html()" value="Посмотреть весь HTML Блока"/></li>
+        <li><input type="button" onclick="text()" value="Посмотреть весь текст Блока"/></li>
+        <li><input type="button" onclick="newp()" value="Поменять абзац Блока"/></li>
+        <li><input type="button" onclick="clone()" value="Создать клон Блока"/></li>
+        <li><input type="button" onclick="clonestyle()" value="Поменять стили нового Блока"/></li>
+      <li></li>
+  <ul/>
+</article>
+<article class="article_3">
+  <ul id="menu">
+      <li>
+        <div id="blok2">
+          <span>Блок</span>
+          <p>Абзац</p>
+        </div>
+        <div id="empty">.</div>
+        <img class="addimg" src="1.png" alt="">
+        <img class="addimg" src="1.png" alt="">
+        <img class="addimg" src="1.png" alt=""><br/>
+
+        <a href="">ссылка1</a>
+        <a href="">ссылка2</a>
+        <li><input type="button" onclick="addelem()" value="Добавить текст в Блоки"/></li>
+        <li><input type="button" onclick="addto()" value="Добавить картинки"/></li>
+        <li><input type="button" onclick="addtolast()" value="Добавить картинки в последний блок"/></li>
+        <li><input type="button" onclick="wrap()" value="Поместить ссылки в тег <p>"/></li>
+        <li><input type="button" onclick="remove()" value="Удалить картинки"/></li>
+        <li><input type="button" onclick="empty()" value="Очистить первый блок"/></li>
+        <li><input type="button" onclick="appendTo()" value="Добавить новый абзац в конец блока"/></li>
+        <li><input type="button" onclick="prependTo()" value="Добавить новый абзац в начало блока"/></li>
+        <li><input type="button" onclick="insertbefore()" value="Добавить новый абзац в средину блока"/></li>
+        <li><input type="text" name="text" id="text" placeholder="введите что угодно" /></li>
+         <li><input type="button" onclick="return val()" value="Посмотреть что ввели в input"/></li>
+           <li>  <input type="password" name="password" id="password" placeholder="введите пароль"/></li>
+           <li>  <input type="button" onclick="return valpass()" value="Посмотреть введеный пароль"/></li>
+
+        </li>
+      </li>
+      <li></li>
+  <ul/>
+</article>
+<article class="article_4">
+<ul id="menu">
+      <li>
+    <div id="comments">
+      <p>Коментарий №1</p>
+      <p>Коментарий №2</p>
+      <p>Коментарий №3</p>
+    </div>
+
+    <form action="#" name="form" method="post" id="form" style="display: none" onsubmit="return false">
+      <textarea name="comment" cols="30" rows="10" name="field"></textarea>
+      <input type="submit" name="send" value="Добавить коментарий" id="done" />
+    </form>
+    <input type="button" id="add_comments" onclick="return false" value="Добавить коментарий"/>
+    </li></br/>
+    <li> <input type="button" id="hide"  onclick="return false" value="Скрыть коментарии"/></li>
+    <li> <input type="button" id="show" style="display: none" onclick="return false" value="Показать коментарии"/></li>
+    <li>
+    <div id="comments2">
+      <p>Коментарий №1</p>
+      <p>Коментарий №2</p>
+      <p>Коментарий №3</p>
+    </div>
+    </li></br/>
+       <li> <input type="button" id="hide2"  onclick="return false" value="Скрыть коментарии через slide"/></li>
+    <li> <input type="button" id="show2" style="display: none" onclick="return false" value="Показать коментарии через slide"/></li>
+    <li>
+    <div id="comments3">
+      <p>Коментарий №1</p>
+      <p>Коментарий №2</p>
+      <p>Коментарий №3</p>
+    </div>
+    </li></br/>
+       <li> <input type="button" id="hide3"  onclick="return false" value="Скрыть коментарии через fade"/></li>
+    <li> <input type="button" id="show3" style="display: none" onclick="return false" value="Показать коментарии через fade"/></li>
+    <li>
+    <div id="comments4">
+      <p>Коментарий №1</p>
+      <p>Коментарий №2</p>
+      <p>Коментарий №3</p>
+    </div>
+    </li>  
+    
+  <ul/>
+</article>
+<article class="article_5">
+    <input type="button" id="addBlock"  value="Добавить блоки разного цвета"/>
+   
+</article>
+
+</main>
+
+
+
+  <script src="js/jQuery.js"></script>
+
+</body>
+</html>
